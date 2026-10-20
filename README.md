@@ -83,31 +83,7 @@ Sources: World Bank World Development Indicators; Government AI Readiness Index 
 - **Large leaves for tree models:** because rows of one country are near-copies, trees with small leaves memorise countries. The grids force leaves of at least 25 rows.
 - **Metrics:** RMSE, MAE and R², all on unseen countries, each compared with a baseline that always predicts the training average.
 
-## 5. Repository contents
-
-```
-├── impact.ipynb                  the full project notebook (all CRISP-DM phases)
-├── README.md                     this file
-├── data/                         raw input files (see section 3)
-└── powerbi/                      CSV tables and guide for the dashboard (optional)
-    ├── df_clean.csv
-    ├── ai_readiness_index.csv
-    └── DASHBOARD_GUIDE.md
-```
-
-## 6. How to run it
-
-1. Install Python 3.10 or newer, then the packages:
-   ```bash
-   pip install pandas numpy matplotlib scikit-learn xgboost jupyter
-   ```
-2. Put the data files in a `data` folder as shown in section 3. The notebook uses Windows-style paths (`data\\file.csv`); on macOS or Linux, change them to forward slashes or use `os.path.join`.
-3. Open `impact.ipynb` and run all cells from the top.
-4. The nested cross-validation takes **about 9-10 minutes**; everything else is quick.
-
-Results can differ very slightly from run to run (XGBoost, for example, gave 11.66 and 11.71 in two runs). This does not change the ranking of the models.
-
-## 7. Power BI dashboard
+## 5. Power BI dashboard
 
 A three-page dashboard visualises the analysis, built from `df_clean.csv` and `ai_readiness_index.csv` (exported from the notebook):
 
@@ -117,7 +93,7 @@ A three-page dashboard visualises the analysis, built from `df_clean.csv` and `a
 
 `DASHBOARD_GUIDE.md` has the setup steps, the DAX measures and the page layouts.
 
-## 8. Limitations
+## 6. Limitations
 
 - **Only 47 countries**, so every score is uncertain, and an R² of about 0.3 means most differences between countries remain unexplained.
 - **Associations, not causes.** The models and correlations cannot show that AI changes jobs.
@@ -126,12 +102,12 @@ A three-page dashboard visualises the analysis, built from `df_clean.csv` and `a
 - **Recorded youth unemployment is low in some of the poorest countries**, partly a measurement effect: where most people farm or work informally, they count as employed.
 - The models predict *current* youth unemployment, not unemployment in later years.
 
-## 9. Possible next steps
+## 7. Possible next steps
 
 - Add data with a time dimension for AI (for example yearly AI adoption, AI-exposure measures or ICT employment).
 - Model year-to-year *changes* rather than levels.
 - Look closely at the countries the models predict worst.
 
-## 10. Acknowledgements
+## 9. Acknowledgements
 
 Data: World Bank (World Development Indicators) and the Government AI Readiness Index 2023.
