@@ -91,16 +91,14 @@ A three-page dashboard visualises the analysis, built from `df_clean.csv` and `a
 2. **What goes with youth unemployment:** the between-country and within-country links, the farm-to-services groups.
 3. **AI readiness:** Kenya's score and rank, the three pillars, and readiness against connectivity and unemployment.
 
-`DASHBOARD_GUIDE.md` has the setup steps, the DAX measures and the page layouts.
-
 ## 6. Limitations
 
 - **Only 47 countries**, so every score is uncertain, and an R² of about 0.3 means most differences between countries remain unexplained.
 - **Associations, not causes.** The models and correlations cannot show that AI changes jobs.
 - **AI readiness is a single 2023 snapshot** per country, with no time dimension, so it cannot be used to study change.
-- **Extreme countries** (Eswatini, South Africa, Liberia and others) are predicted badly, and the models pull predictions towards the average.
+- **Extreme countries** (Eswatini, South Africa, Liberia and others) the models pull predictions towards the average.
 - **Recorded youth unemployment is low in some of the poorest countries**, partly a measurement effect: where most people farm or work informally, they count as employed.
-- The models predict *current* youth unemployment, not unemployment in later years.
+
 
 ## 7. Possible next steps
 
